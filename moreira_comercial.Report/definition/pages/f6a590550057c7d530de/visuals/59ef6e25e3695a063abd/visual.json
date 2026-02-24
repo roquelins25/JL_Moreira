@@ -1,12 +1,12 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
-  "name": "b4e281a258aa00039396",
+  "name": "59ef6e25e3695a063abd",
   "position": {
-    "x": 223.44827586206895,
-    "y": 70.935960591133011,
-    "z": 2000,
-    "height": 119.70443349753695,
-    "width": 229.65517241379311
+    "x": 828.83720930232562,
+    "y": 48.372093023255815,
+    "z": 4003,
+    "height": 50.232558139534888,
+    "width": 306.97674418604652
   },
   "visual": {
     "visualType": "cardVisual",
@@ -22,32 +22,14 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "01. Qtd Vendas"
+                  "Property": "* PeriodoFormatado"
                 }
               },
-              "queryRef": "_Medidas.01. Qtd Vendas",
-              "nativeQueryRef": "01. Qtd Vendas"
+              "queryRef": "_Medidas.Data",
+              "nativeQueryRef": "* PeriodoFormatado"
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Measure": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "_Medidas"
-                  }
-                },
-                "Property": "01. Qtd Vendas"
-              }
-            },
-            "direction": "Descending"
-          }
-        ],
-        "isDefaultSort": true
       }
     },
     "objects": {
@@ -80,6 +62,22 @@
           }
         }
       ],
+      "divider": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
       "outline": [
         {
           "properties": {
@@ -96,7 +94,7 @@
           }
         }
       ],
-      "divider": [
+      "label": [
         {
           "properties": {
             "show": {
@@ -115,17 +113,10 @@
       "value": [
         {
           "properties": {
-            "horizontalAlignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'center'"
-                }
-              }
-            },
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "15D"
+                  "Value": "12D"
                 }
               }
             },
@@ -140,27 +131,6 @@
                   }
                 }
               }
-            }
-          },
-          "selector": {
-            "id": "default"
-          }
-        },
-        {
-          "properties": {
-            "labelDisplayUnits": {
-              "expr": {
-                "Literal": {
-                  "Value": "1D"
-                }
-              }
-            },
-            "labelPrecision": {
-              "expr": {
-                "Literal": {
-                  "Value": "0L"
-                }
-              }
             },
             "bold": {
               "expr": {
@@ -171,42 +141,7 @@
             }
           },
           "selector": {
-            "metadata": "_Medidas.01. Qtd Vendas"
-          }
-        }
-      ],
-      "label": [
-        {
-          "properties": {
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0.2
-                    }
-                  }
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "12D"
-                }
-              }
-            },
-            "position": {
-              "expr": {
-                "Literal": {
-                  "Value": "'aboveValue'"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Medidas.01. Qtd Vendas"
+            "id": "default"
           }
         }
       ]
