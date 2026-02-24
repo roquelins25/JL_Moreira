@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "moreira_comercial"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "2deb5e90-08e5-4edc-ba3a-c37d3d304469"
+  }
+}

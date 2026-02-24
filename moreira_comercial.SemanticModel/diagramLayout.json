@@ -1,0 +1,114 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 160.25100795553712
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 1217.6638392144055,
+            "y": 245.46431709659345
+          },
+          "nodeIndex": "TB_Empresa",
+          "nodeLineageTag": "6dfe2404-27ab-4949-bbba-98f2e9cda574",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 1,
+          "expandedHeight": 300
+        },
+        {
+          "location": {
+            "x": 687.97465122082815,
+            "y": 204.90432826225978
+          },
+          "nodeIndex": "TB_GProduto",
+          "nodeLineageTag": "fc5ec8fd-aee5-4f29-a0d0-f8d22bb73d4b",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 1002.1760044662665,
+            "y": 739.50032435427659
+          },
+          "nodeIndex": "TB_NotaFiscal",
+          "nodeLineageTag": "4d5dda3f-547c-4ca0-a284-0f2c8d665df6",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 8
+        },
+        {
+          "location": {
+            "x": 691.33602121476588,
+            "y": 416.6256312621997
+          },
+          "nodeIndex": "TB_Produto",
+          "nodeLineageTag": "46dd8f1d-f76f-4d12-bae9-0217d23efbfc",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 160.25100795553712
+          },
+          "nodeIndex": "_Medidas",
+          "nodeLineageTag": "e1045235-e3c8-416c-b155-523e55311d50",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 763.25075338667466,
+            "y": 1081.8722132558971
+          },
+          "nodeIndex": "CALENDARIO DAX",
+          "nodeLineageTag": "c1129b92-d7c3-44cf-ad21-17626ffd5317",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 1213.6147182148259,
+            "y": 401.43961702597534
+          },
+          "nodeIndex": "TB_Cliente",
+          "nodeLineageTag": "7e40f7f1-75f4-49a1-93a5-bc77d3db3b55",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 7
+        }
+      ],
+      "name": "Todas as tabelas",
+      "zoomValue": 70.95554390096882,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Todas as tabelas",
+  "defaultDiagram": "Todas as tabelas"
+}

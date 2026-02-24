@@ -1,0 +1,87 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "name": "701094c6999101dd721c",
+  "position": {
+    "x": 807.44186046511629,
+    "y": 584.186046511628,
+    "z": 7,
+    "height": 120,
+    "width": 415.81395348837214
+  },
+  "visual": {
+    "visualType": "multiRowCard",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "02. Quantidade/Volume"
+                }
+              },
+              "queryRef": "_Medidas.02. Quantidade/Volume",
+              "nativeQueryRef": "02. Quantidade/Volume"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "01. YTD"
+                }
+              },
+              "queryRef": "_Medidas.01. YTD",
+              "nativeQueryRef": "01. YTD"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_Medidas"
+                  }
+                },
+                "Property": "02. Quantidade/Volume"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "003d8f35065c14dc5200",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Medidas"
+              }
+            },
+            "Property": "02. Quantidade/Volume"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}
