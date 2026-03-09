@@ -5,13 +5,13 @@
       "ordinal": 0,
       "scrollPosition": {
         "x": 0,
-        "y": 219.02853482292153
+        "y": 218.4466378220288
       },
       "nodes": [
         {
           "location": {
-            "x": 1217.6638392144055,
-            "y": 325.58982107436196
+            "x": 1345.9131556131449,
+            "y": 599.28313119345512
           },
           "nodeIndex": "TB_Empresa",
           "nodeLineageTag": "6dfe2404-27ab-4949-bbba-98f2e9cda574",
@@ -25,7 +25,7 @@
         {
           "location": {
             "x": 687.97465122082815,
-            "y": 285.02983224002833
+            "y": 585.50047215666041
           },
           "nodeIndex": "TB_GProduto",
           "nodeLineageTag": "fc5ec8fd-aee5-4f29-a0d0-f8d22bb73d4b",
@@ -38,7 +38,7 @@
         {
           "location": {
             "x": 1002.1760044662665,
-            "y": 819.6258283320451
+            "y": 1120.0964682486772
           },
           "nodeIndex": "TB_NotaFiscal",
           "nodeLineageTag": "4d5dda3f-547c-4ca0-a284-0f2c8d665df6",
@@ -51,7 +51,7 @@
         {
           "location": {
             "x": 691.33602121476588,
-            "y": 496.75113523996822
+            "y": 797.2217751566003
           },
           "nodeIndex": "TB_Produto",
           "nodeLineageTag": "46dd8f1d-f76f-4d12-bae9-0217d23efbfc",
@@ -64,7 +64,7 @@
         {
           "location": {
             "x": 0,
-            "y": 240.37651193330564
+            "y": 540.84715184993775
           },
           "nodeIndex": "_Medidas",
           "nodeLineageTag": "e1045235-e3c8-416c-b155-523e55311d50",
@@ -77,7 +77,7 @@
         {
           "location": {
             "x": 763.25075338667466,
-            "y": 1161.9977172336658
+            "y": 1462.4683571502978
           },
           "nodeIndex": "CALENDARIO DAX",
           "nodeLineageTag": "c1129b92-d7c3-44cf-ad21-17626ffd5317",
@@ -90,7 +90,7 @@
         {
           "location": {
             "x": 1213.6147182148259,
-            "y": 481.56512100374385
+            "y": 782.03576092037588
           },
           "nodeIndex": "TB_Cliente",
           "nodeLineageTag": "7e40f7f1-75f4-49a1-93a5-bc77d3db3b55",
@@ -103,11 +103,37 @@
         {
           "location": {
             "x": 1501.6638392144055,
-            "y": 588.93610662794856
+            "y": 889.40674654458064
           },
           "nodeIndex": "Atualização",
           "size": {
             "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1785.6638392144055,
+            "y": 749.28124256681213
+          },
+          "nodeIndex": "xSenha",
+          "nodeLineageTag": "6a6f104f-a6e7-42e2-a9ab-8c3ef30e0f7e",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2069.6638392144055,
+            "y": 677.09298660015929
+          },
+          "nodeIndex": "_Senhas",
+          "nodeLineageTag": "9e7740af-df83-45f6-9e17-f64b4d9cef82",
+          "size": {
+            "height": 128,
             "width": 234
           },
           "zIndex": 0

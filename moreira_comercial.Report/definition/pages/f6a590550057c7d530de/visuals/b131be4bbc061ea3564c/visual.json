@@ -2,11 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
   "name": "b131be4bbc061ea3564c",
   "position": {
-    "x": 453.02325581395348,
-    "y": 81.860465116279073,
-    "z": 4000,
-    "height": 166.51162790697674,
-    "width": 257.67441860465118
+    "x": 224.33497536945814,
+    "y": 19.017069538320541,
+    "z": 3000,
+    "height": 171.13300492610838,
+    "width": 245.61576354679804,
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -64,6 +65,17 @@
           },
           "selector": {
             "id": "default"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'top'"
+                }
+              }
+            }
           }
         }
       ],
@@ -208,6 +220,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'aboveValue'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
                 }
               }
             }
@@ -376,22 +395,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "223eed5b150bc9001d7a",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Medidas"
-              }
-            },
-            "Property": "02. Quantidade/Volume"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
-  }
+  "parentGroupName": "88d8ce0f9ed7d860614e"
 }

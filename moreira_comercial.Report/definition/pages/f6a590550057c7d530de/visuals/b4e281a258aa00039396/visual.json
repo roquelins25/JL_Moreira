@@ -2,11 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
   "name": "b4e281a258aa00039396",
   "position": {
-    "x": 223.44827586206895,
-    "y": 70.935960591133011,
+    "x": 469.95073891625617,
+    "y": 31.430862641768812,
     "z": 2000,
-    "height": 119.70443349753695,
-    "width": 229.65517241379311
+    "height": 75.369458128078819,
+    "width": 214.58128078817734,
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -193,7 +194,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
+                  "Value": "8D"
                 }
               }
             },
@@ -207,6 +208,20 @@
           },
           "selector": {
             "metadata": "_Medidas.01. Qtd Vendas"
+          }
+        },
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
           }
         }
       ]
@@ -227,5 +242,6 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  }
+  },
+  "parentGroupName": "88d8ce0f9ed7d860614e"
 }

@@ -1,65 +1,71 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
-  "name": "8da2f4ea34006dadd446",
+  "name": "c2ee7418791269752037",
   "position": {
-    "x": 694.28571428571433,
-    "y": 49.164852789552071,
-    "z": 8000,
-    "height": 30.147783251231527,
-    "width": 165.81280788177341,
+    "x": 97.918676774638186,
+    "y": 337.86354238456238,
+    "z": 1000,
+    "height": 43.225361819434873,
+    "width": 197.60165403170228,
     "tabOrder": 1000
   },
   "visual": {
-    "visualType": "card",
+    "visualType": "slicer",
     "query": {
       "queryState": {
         "Values": {
           "projections": [
             {
               "field": {
-                "Measure": {
+                "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "CALENDARIO DAX"
+                      "Entity": "_Senhas"
                     }
                   },
-                  "Property": "Dias Faltantes"
+                  "Property": "acesso"
                 }
               },
-              "queryRef": "CALENDARIO DAX.Dias Faltantes",
-              "nativeQueryRef": "Dias Faltantes"
+              "queryRef": "_Senhas.acesso",
+              "nativeQueryRef": "acesso",
+              "active": true
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_Senhas"
+                  }
+                },
+                "Property": "acesso"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
       }
     },
     "objects": {
-      "labels": [
+      "data": [
         {
           "properties": {
-            "fontSize": {
+            "mode": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
-                }
-              }
-            },
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0
-                    }
-                  }
+                  "Value": "'Dropdown'"
                 }
               }
             }
           }
         }
       ],
-      "categoryLabels": [
+      "header": [
         {
           "properties": {
             "show": {
@@ -89,6 +95,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "parentGroupName": "88d8ce0f9ed7d860614e"
+  }
 }

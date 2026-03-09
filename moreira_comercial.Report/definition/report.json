@@ -9,6 +9,15 @@
         "page": "2.3.0"
       },
       "type": "SharedResources"
+    },
+    "customTheme": {
+      "name": "Corporativo_Cl_ssico12397162888137103.json",
+      "reportVersionAtImport": {
+        "visual": "2.6.0",
+        "report": "3.1.0",
+        "page": "2.3.0"
+      },
+      "type": "RegisteredResources"
     }
   },
   "objects": {
@@ -66,8 +75,28 @@
       "type": "RegisteredResources",
       "items": [
         {
-          "name": "Home027104127540361844.png",
-          "path": "Home027104127540361844.png",
+          "name": "Corporativo_Cl_ssico12397162888137103.json",
+          "path": "Corporativo_Cl_ssico12397162888137103.json",
+          "type": "CustomTheme"
+        },
+        {
+          "name": "Login7836231608879943.png",
+          "path": "Login7836231608879943.png",
+          "type": "Image"
+        },
+        {
+          "name": "Senha_Incorreta04696614888838935.png",
+          "path": "Senha_Incorreta04696614888838935.png",
+          "type": "Image"
+        },
+        {
+          "name": "Filters40216080927875464.png",
+          "path": "Filters40216080927875464.png",
+          "type": "Image"
+        },
+        {
+          "name": "Home4907191368729634.png",
+          "path": "Home4907191368729634.png",
           "type": "Image"
         }
       ]
@@ -76,9 +105,13 @@
   "settings": {
     "useStylableVisualContainerHeader": true,
     "exportDataMode": "AllowSummarized",
+    "defaultFilterActionIsDataFilter": true,
     "defaultDrillFilterOtherVisuals": true,
     "allowChangeFilterTypes": true,
     "useEnhancedTooltips": true,
-    "useDefaultAggregateDisplayName": true
+    "useDefaultAggregateDisplayName": true,
+    "queryLimitOption": "None",
+    "customMemoryLimit": "1048576",
+    "customTimeoutLimit": "225"
   }
 }

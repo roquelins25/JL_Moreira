@@ -1,65 +1,64 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
-  "name": "8da2f4ea34006dadd446",
+  "name": "23c9aa0e4c2502dbdd90",
   "position": {
-    "x": 694.28571428571433,
-    "y": 49.164852789552071,
-    "z": 8000,
-    "height": 30.147783251231527,
-    "width": 165.81280788177341,
-    "tabOrder": 1000
+    "x": 91.743625086147489,
+    "y": 387.26395589248796,
+    "z": 0,
+    "height": 46.7539627842867,
+    "width": 203.77670572019298,
+    "tabOrder": 0
   },
   "visual": {
-    "visualType": "card",
+    "visualType": "slicer",
     "query": {
       "queryState": {
         "Values": {
           "projections": [
             {
               "field": {
-                "Measure": {
+                "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "CALENDARIO DAX"
+                      "Entity": "xSenha"
                     }
                   },
-                  "Property": "Dias Faltantes"
+                  "Property": "xSenha"
                 }
               },
-              "queryRef": "CALENDARIO DAX.Dias Faltantes",
-              "nativeQueryRef": "Dias Faltantes"
+              "queryRef": "xSenha.xSenha",
+              "nativeQueryRef": "xSenha",
+              "active": true
             }
           ]
         }
       }
     },
     "objects": {
-      "labels": [
+      "data": [
+        {
+          "properties": {}
+        }
+      ],
+      "general": [
+        {
+          "properties": {}
+        }
+      ],
+      "slider": [
         {
           "properties": {
-            "fontSize": {
+            "show": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
-                }
-              }
-            },
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0
-                    }
-                  }
+                  "Value": "false"
                 }
               }
             }
           }
         }
       ],
-      "categoryLabels": [
+      "header": [
         {
           "properties": {
             "show": {
@@ -89,6 +88,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "parentGroupName": "88d8ce0f9ed7d860614e"
+  }
 }

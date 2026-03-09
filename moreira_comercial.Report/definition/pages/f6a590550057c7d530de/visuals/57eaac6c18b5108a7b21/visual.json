@@ -2,11 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
   "name": "57eaac6c18b5108a7b21",
   "position": {
-    "x": 915.960591133005,
-    "y": 94.8768472906404,
-    "z": 4002,
-    "height": 117.04433497536947,
-    "width": 149.85221674876848
+    "x": 1021.4141414141415,
+    "y": 447.55864290748013,
+    "z": 5000,
+    "height": 116.36363636363637,
+    "width": 149.6103896103896,
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "slicer",
@@ -114,22 +115,6 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "12cb194e438ecc9bb670",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "CALENDARIO DAX"
-              }
-            },
-            "Property": "Mes Atual"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
-  }
+  "parentGroupName": "88d8ce0f9ed7d860614e",
+  "isHidden": true
 }

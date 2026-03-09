@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
   "name": "219757305b0a0be23b26",
   "position": {
-    "x": 804.65116279069775,
-    "y": 362.7906976744186,
-    "z": 4006,
-    "height": 40.930232558139537,
-    "width": 463.25581395348837,
-    "tabOrder": 3
+    "x": 470.07215007215007,
+    "y": 111.39702674586397,
+    "z": 7000,
+    "height": 52.640692640692642,
+    "width": 214.25685425685427,
+    "tabOrder": 0
   },
   "visual": {
     "visualType": "textbox",
@@ -19,12 +19,15 @@
               {
                 "textRuns": [
                   {
-                    "value": "Esta Tendenciando um  Faturamento de  ",
+                    "value": "Tendencia: "
+                  },
+                  {
+                    "value": " ",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontFamily": "Segoe UI Light",
-                      "fontSize": "9pt",
-                      "color": "#cccccc"
+                      "fontSize": "10.5pt",
+                      "color": "#000000"
                     }
                   },
                   {
@@ -40,17 +43,39 @@
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontFamily": "Segoe UI Light",
-                      "fontSize": "9pt",
-                      "color": "#cccccc"
+                      "fontSize": "10.5pt",
+                      "color": "#000000"
                     }
                   },
                   {
-                    "value": "   (  ",
+                    "value": " ",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontFamily": "Segoe UI Light",
-                      "fontSize": "9pt",
-                      "color": "#cccccc"
+                      "fontSize": "10.5pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": ",",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "Segoe UI Light",
+                      "fontSize": "8pt",
+                      "color": "#000000"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": " (  ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "Segoe UI Light",
+                      "fontSize": "8pt",
+                      "color": "#000000"
                     }
                   },
                   {
@@ -66,17 +91,17 @@
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontFamily": "Segoe UI Light",
-                      "fontSize": "9pt",
-                      "color": "#cccccc"
+                      "fontSize": "8pt",
+                      "color": "#000000"
                     }
                   },
                   {
-                    "value": "  ) da Meta.",
+                    "value": "  ) do Ano Anterior.",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontFamily": "Segoe UI Light",
-                      "fontSize": "9pt",
-                      "color": "#cccccc"
+                      "fontSize": "8pt",
+                      "color": "#000000"
                     }
                   }
                 ]
@@ -272,5 +297,6 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  }
+  },
+  "parentGroupName": "88d8ce0f9ed7d860614e"
 }

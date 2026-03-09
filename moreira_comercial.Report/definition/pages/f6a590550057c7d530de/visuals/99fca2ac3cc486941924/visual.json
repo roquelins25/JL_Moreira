@@ -2,11 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
   "name": "99fca2ac3cc486941924",
   "position": {
-    "x": 11.527093596059114,
-    "y": 224.33497536945814,
-    "z": 4001,
-    "height": 188.86699507389162,
-    "width": 771.42857142857144
+    "x": 0,
+    "y": 181.2830793905373,
+    "z": 4000,
+    "height": 183.54679802955664,
+    "width": 694.28571428571433,
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "lineClusteredColumnComboChart",
@@ -228,9 +229,8 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 4,
-                      "Percent": 0.6
+                    "Literal": {
+                      "Value": "'#D7EEED'"
                     }
                   }
                 }
@@ -303,6 +303,13 @@
         {
           "properties": {
             "showSeries": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "enableBackground": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -441,7 +448,28 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Faturamento vs Ano Anterior'"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
                 }
               }
             }
@@ -464,6 +492,7 @@
     },
     "drillFilterOtherVisuals": true
   },
+  "parentGroupName": "88d8ce0f9ed7d860614e",
   "filterConfig": {
     "filters": [
       {

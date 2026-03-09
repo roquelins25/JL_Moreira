@@ -1,7 +1,7 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
-  "name": "f6a590550057c7d530de",
-  "displayName": "HOME",
+  "name": "fa026425085a3a0c2301",
+  "displayName": "Senha Incorreta",
   "displayOption": "FitToPage",
   "height": 720,
   "width": 1280,
@@ -14,7 +14,7 @@
               "name": {
                 "expr": {
                   "Literal": {
-                    "Value": "'Home.png'"
+                    "Value": "'Senha Incorreta.png'"
                   }
                 }
               },
@@ -23,7 +23,7 @@
                   "ResourcePackageItem": {
                     "PackageName": "RegisteredResources",
                     "PackageType": 1,
-                    "ItemName": "Home4907191368729634.png"
+                    "ItemName": "Senha_Incorreta04696614888838935.png"
                   }
                 }
               },
@@ -46,13 +46,5 @@
         }
       }
     ]
-  },
-  "visibility": "HiddenInViewMode",
-  "visualInteractions": [
-    {
-      "source": "57eaac6c18b5108a7b21",
-      "target": "99fca2ac3cc486941924",
-      "type": "NoFilter"
-    }
-  ]
+  }
 }

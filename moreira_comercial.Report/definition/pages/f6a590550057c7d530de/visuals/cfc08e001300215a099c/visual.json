@@ -1,40 +1,72 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
-  "name": "6690a83f63274a07b007",
+  "name": "cfc08e001300215a099c",
   "position": {
-    "x": 783.82935221106152,
-    "y": 212.36044358726,
-    "z": 4004,
-    "height": 66.125290023201856,
-    "width": 312.06496519721577,
-    "tabOrder": 1
+    "x": 1055.933838731909,
+    "y": 59.104066161268094,
+    "z": 3000,
+    "height": 46.7539627842867,
+    "width": 224.06616126809098,
+    "tabOrder": 11001
   },
   "visual": {
-    "visualType": "card",
+    "visualType": "slicer",
     "query": {
       "queryState": {
         "Values": {
           "projections": [
             {
               "field": {
-                "Measure": {
+                "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "_Medidas"
+                      "Entity": "CALENDARIO DAX"
                     }
                   },
-                  "Property": "* VendaATUAL"
+                  "Property": "Date"
                 }
               },
-              "queryRef": "_Medidas.* VendaATUAL",
-              "nativeQueryRef": "* VendaATUAL"
+              "queryRef": "CALENDARIO DAX.Date",
+              "nativeQueryRef": "Date",
+              "active": true
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "CALENDARIO DAX"
+                  }
+                },
+                "Property": "Date"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": true
       }
     },
     "objects": {
-      "categoryLabels": [
+      "data": [
+        {
+          "properties": {
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Between'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "header": [
         {
           "properties": {
             "show": {
@@ -47,39 +79,13 @@
           }
         }
       ],
-      "labels": [
+      "slider": [
         {
           "properties": {
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            },
-            "fontSize": {
+            "show": {
               "expr": {
                 "Literal": {
-                  "Value": "15D"
-                }
-              }
-            },
-            "fontFamily": {
-              "expr": {
-                "Literal": {
-                  "Value": "'wf_standard-font_light, helvetica, arial, sans-serif'"
-                }
-              }
-            },
-            "bold": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             }
@@ -103,5 +109,7 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  }
+  },
+  "parentGroupName": "0343b83a29d29063e602",
+  "isHidden": true
 }

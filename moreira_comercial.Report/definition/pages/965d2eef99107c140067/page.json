@@ -1,6 +1,6 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
-  "name": "f6a590550057c7d530de",
+  "name": "965d2eef99107c140067",
   "displayName": "HOME",
   "displayOption": "FitToPage",
   "height": 720,
@@ -14,7 +14,7 @@
               "name": {
                 "expr": {
                   "Literal": {
-                    "Value": "'Home.png'"
+                    "Value": "'Login.png'"
                   }
                 }
               },
@@ -23,7 +23,7 @@
                   "ResourcePackageItem": {
                     "PackageName": "RegisteredResources",
                     "PackageType": 1,
-                    "ItemName": "Home4907191368729634.png"
+                    "ItemName": "Login7836231608879943.png"
                   }
                 }
               },
@@ -46,13 +46,5 @@
         }
       }
     ]
-  },
-  "visibility": "HiddenInViewMode",
-  "visualInteractions": [
-    {
-      "source": "57eaac6c18b5108a7b21",
-      "target": "99fca2ac3cc486941924",
-      "type": "NoFilter"
-    }
-  ]
+  }
 }
