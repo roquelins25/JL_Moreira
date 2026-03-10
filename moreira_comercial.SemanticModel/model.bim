@@ -3590,6 +3590,29 @@
                   }
                 ]
               },
+              "entity__medida.HTML_filtros_ativos": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "_Medidas",
+                    "ConceptualProperty": "HTML_Filtros_Ativos"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "HTML filtros ativos": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "HTML_Filtros_Ativos": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.99
+                    }
+                  }
+                ]
+              },
               "entity__medida.PeriodoFormatado": {
                 "Definition": {
                   "Binding": {
@@ -3780,6 +3803,22 @@
                       },
                       "State": "Suggested",
                       "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "entity__medida.entity_01__media_de_faturamento": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "_Medidas",
+                    "ConceptualProperty": "01. Media de Faturamento"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "01. media de faturamento": {
+                      "State": "Generated"
                     }
                   }
                 ]
@@ -4225,6 +4264,208 @@
                     }
                   }
                 ]
+              },
+              "entity__senha": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "_Senhas"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "_senha": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "entity__senha.acesso": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "_Senhas",
+                    "ConceptualProperty": "acesso"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "acesso": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "entity__senha.acesso_button": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "_Senhas",
+                    "ConceptualProperty": "AcessoButton"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "acesso button": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "AcessoButton": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.99
+                    }
+                  },
+                  {
+                    "acesso key": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "acesso switch": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "acesso knob": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "acesso control": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "acesso badge": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.461
+                    }
+                  },
+                  {
+                    "acesso pin": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.461
+                    }
+                  },
+                  {
+                    "acesso brooch": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.461
+                    }
+                  }
+                ]
+              },
+              "entity__senha.senha": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "_Senhas",
+                    "ConceptualProperty": "Senha"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "senha": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "x_senha": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "xSenha"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "x senha": {
+                      "State": "Generated",
+                      "Weight": 0.87
+                    }
+                  },
+                  {
+                    "xSenha": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.8613
+                    }
+                  }
+                ]
+              },
+              "x_senha.valor_xSenha": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "xSenha",
+                    "ConceptualProperty": "Valor xSenha"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "valor xSenha": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "x_senha.x_senha": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "xSenha",
+                    "ConceptualProperty": "xSenha"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "x senha": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "xSenha": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.99
+                    }
+                  }
+                ]
               }
             },
             "Language": "en-US",
@@ -4356,6 +4597,39 @@
                   "TB_G_produto.GRP_descricao": {
                     "Target": {
                       "Entity": "TB_G_produto.GRP_descricao"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "TB_G_produto_has_entity__medida_HTML_filtros_ativos": {
+                "Binding": {
+                  "ConceptualEntity": "TB_GProduto"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "entity__medida.HTML_filtros_ativos"
+                      },
+                      "Subject": {
+                        "Role": "TB_G_produto"
+                      }
+                    },
+                    "ID": "TB_G_produtos_have_HTML_filtros_ativos",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "TB_G_produto": {
+                    "Target": {
+                      "Entity": "TB_G_produto"
+                    }
+                  },
+                  "entity__medida.HTML_filtros_ativos": {
+                    "Target": {
+                      "Entity": "entity__medida.HTML_filtros_ativos"
                     }
                   }
                 },
@@ -4765,6 +5039,39 @@
                   "TB_empresa.emp_cnpj": {
                     "Target": {
                       "Entity": "TB_empresa.emp_cnpj"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "TB_empresa_has_entity__medida_HTML_filtros_ativos": {
+                "Binding": {
+                  "ConceptualEntity": "TB_Empresa"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "entity__medida.HTML_filtros_ativos"
+                      },
+                      "Subject": {
+                        "Role": "TB_empresa"
+                      }
+                    },
+                    "ID": "TB_empresas_have_HTML_filtros_ativos",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "TB_empresa": {
+                    "Target": {
+                      "Entity": "TB_empresa"
+                    }
+                  },
+                  "entity__medida.HTML_filtros_ativos": {
+                    "Target": {
+                      "Entity": "entity__medida.HTML_filtros_ativos"
                     }
                   }
                 },
@@ -5667,6 +5974,39 @@
                 },
                 "State": "Generated"
               },
+              "TB_nota_fiscal_has_entity__medida_entity_01__media_de_faturamento": {
+                "Binding": {
+                  "ConceptualEntity": "TB_NotaFiscal"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "entity__medida.entity_01__media_de_faturamento"
+                      },
+                      "Subject": {
+                        "Role": "TB_nota_fiscal"
+                      }
+                    },
+                    "ID": "TB_nota_fiscals_have_01__media_de_faturamento",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "TB_nota_fiscal": {
+                    "Target": {
+                      "Entity": "TB_nota_fiscal"
+                    }
+                  },
+                  "entity__medida.entity_01__media_de_faturamento": {
+                    "Target": {
+                      "Entity": "entity__medida.entity_01__media_de_faturamento"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
               "TB_nota_fiscal_has_entity__medida_entity_01__preco_medio": {
                 "Binding": {
                   "ConceptualEntity": "TB_NotaFiscal"
@@ -6340,6 +6680,39 @@
                 },
                 "State": "Generated"
               },
+              "TB_produto_has_entity__medida_HTML_filtros_ativos": {
+                "Binding": {
+                  "ConceptualEntity": "TB_Produto"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "entity__medida.HTML_filtros_ativos"
+                      },
+                      "Subject": {
+                        "Role": "TB_produto"
+                      }
+                    },
+                    "ID": "TB_produtos_have_HTML_filtros_ativos",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "TB_produto": {
+                    "Target": {
+                      "Entity": "TB_produto"
+                    }
+                  },
+                  "entity__medida.HTML_filtros_ativos": {
+                    "Target": {
+                      "Entity": "entity__medida.HTML_filtros_ativos"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
               "atualização_data_atualizada_ano_has_atualização_data_atualizada_trimestre": {
                 "Binding": {
                   "ConceptualEntity": "Atualização"
@@ -6372,7 +6745,7 @@
                     "Weight": 0.99
                   },
                   {
-                    "ID": "trimestres_are_in_anos1",
+                    "ID": "trimestres_are_in_anos",
                     "Preposition": {
                       "Object": {
                         "Role": "atualização.data_atualizada.ano"
@@ -6603,7 +6976,7 @@
                     "Weight": 0.99
                   },
                   {
-                    "ID": "dias_are_in_mê1",
+                    "ID": "dias_are_in_mê",
                     "Preposition": {
                       "Object": {
                         "Role": "atualização.data_atualizada.mê"
@@ -6669,7 +7042,7 @@
                     "Weight": 0.99
                   },
                   {
-                    "ID": "mê_are_in_trimestres1",
+                    "ID": "mê_are_in_trimestres",
                     "Preposition": {
                       "Object": {
                         "Role": "atualização.data_atualizada.trimestre"
@@ -6768,7 +7141,7 @@
                     "Weight": 0.99
                   },
                   {
-                    "ID": "trimestres_are_in_anos",
+                    "ID": "trimestres_are_in_anos1",
                     "Preposition": {
                       "Object": {
                         "Role": "calendario_dax.date.ano"
@@ -6999,7 +7372,7 @@
                     "Weight": 0.99
                   },
                   {
-                    "ID": "dias_are_in_mê",
+                    "ID": "dias_are_in_mê1",
                     "Preposition": {
                       "Object": {
                         "Role": "calendario_dax.date.mê"
@@ -7065,7 +7438,7 @@
                     "Weight": 0.99
                   },
                   {
-                    "ID": "mê_are_in_trimestres",
+                    "ID": "mê_are_in_trimestres1",
                     "Preposition": {
                       "Object": {
                         "Role": "calendario_dax.date.trimestre"
@@ -7429,6 +7802,39 @@
                 },
                 "State": "Generated"
               },
+              "calendario_dax_has_entity__medida_HTML_filtros_ativos": {
+                "Binding": {
+                  "ConceptualEntity": "CALENDARIO DAX"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "entity__medida.HTML_filtros_ativos"
+                      },
+                      "Subject": {
+                        "Role": "calendario_dax"
+                      }
+                    },
+                    "ID": "calendario_dax_have_HTML_filtros_ativos",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "calendario_dax": {
+                    "Target": {
+                      "Entity": "calendario_dax"
+                    }
+                  },
+                  "entity__medida.HTML_filtros_ativos": {
+                    "Target": {
+                      "Entity": "entity__medida.HTML_filtros_ativos"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
               "calendario_dax_has_entity__medida_PeriodoFormatado": {
                 "Binding": {
                   "ConceptualEntity": "CALENDARIO DAX"
@@ -7589,6 +7995,39 @@
                   "entity__medida.entity_01___YTD_vs_ano_ant": {
                     "Target": {
                       "Entity": "entity__medida.entity_01___YTD_vs_ano_ant"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "calendario_dax_has_entity__medida_entity_01__media_de_faturamento": {
+                "Binding": {
+                  "ConceptualEntity": "CALENDARIO DAX"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "entity__medida.entity_01__media_de_faturamento"
+                      },
+                      "Subject": {
+                        "Role": "calendario_dax"
+                      }
+                    },
+                    "ID": "calendario_dax_have_01__media_de_faturamento",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "calendario_dax": {
+                    "Target": {
+                      "Entity": "calendario_dax"
+                    }
+                  },
+                  "entity__medida.entity_01__media_de_faturamento": {
+                    "Target": {
+                      "Entity": "entity__medida.entity_01__media_de_faturamento"
                     }
                   }
                 },
@@ -8150,6 +8589,204 @@
                   "entity__medida.format_calendario_fundo_fat": {
                     "Target": {
                       "Entity": "entity__medida.format_calendario_fundo_fat"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "entity__senha_has_acesso": {
+                "Binding": {
+                  "ConceptualEntity": "_Senhas"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "entity__senha.acesso"
+                      },
+                      "Subject": {
+                        "Role": "entity__senha"
+                      }
+                    },
+                    "ID": "Phrasing_senhas_have_acessos",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "entity__senha": {
+                    "Target": {
+                      "Entity": "entity__senha"
+                    }
+                  },
+                  "entity__senha.acesso": {
+                    "Target": {
+                      "Entity": "entity__senha.acesso"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "entity__senha_has_acesso_button": {
+                "Binding": {
+                  "ConceptualEntity": "_Senhas"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "entity__senha.acesso_button"
+                      },
+                      "Subject": {
+                        "Role": "entity__senha"
+                      }
+                    },
+                    "ID": "Phrasing_senhas_have_acesso_button",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "entity__senha": {
+                    "Target": {
+                      "Entity": "entity__senha"
+                    }
+                  },
+                  "entity__senha.acesso_button": {
+                    "Target": {
+                      "Entity": "entity__senha.acesso_button"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "entity__senha_has_senha": {
+                "Binding": {
+                  "ConceptualEntity": "_Senhas"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "entity__senha.senha"
+                      },
+                      "Subject": {
+                        "Role": "entity__senha"
+                      }
+                    },
+                    "ID": "Phrasing_senhas_have_senhas",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "entity__senha": {
+                    "Target": {
+                      "Entity": "entity__senha"
+                    }
+                  },
+                  "entity__senha.senha": {
+                    "Target": {
+                      "Entity": "entity__senha.senha"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "x_senha_has_entity__senha_acesso_button": {
+                "Binding": {
+                  "ConceptualEntity": "xSenha"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "entity__senha.acesso_button"
+                      },
+                      "Subject": {
+                        "Role": "x_senha"
+                      }
+                    },
+                    "ID": "x_senhas_have_acesso_button",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "entity__senha.acesso_button": {
+                    "Target": {
+                      "Entity": "entity__senha.acesso_button"
+                    }
+                  },
+                  "x_senha": {
+                    "Target": {
+                      "Entity": "x_senha"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "x_senha_has_valor_xSenha": {
+                "Binding": {
+                  "ConceptualEntity": "xSenha"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "x_senha.valor_xSenha"
+                      },
+                      "Subject": {
+                        "Role": "x_senha"
+                      }
+                    },
+                    "ID": "x_senhas_have_valor_xSenha",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "x_senha": {
+                    "Target": {
+                      "Entity": "x_senha"
+                    }
+                  },
+                  "x_senha.valor_xSenha": {
+                    "Target": {
+                      "Entity": "x_senha.valor_xSenha"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "x_senha_has_x_senha": {
+                "Binding": {
+                  "ConceptualEntity": "xSenha"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "x_senha.x_senha"
+                      },
+                      "Subject": {
+                        "Role": "x_senha"
+                      }
+                    },
+                    "ID": "x_senhas_have_x_senhas",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "x_senha": {
+                    "Target": {
+                      "Entity": "x_senha"
+                    }
+                  },
+                  "x_senha.x_senha": {
+                    "Target": {
+                      "Entity": "x_senha.x_senha"
                     }
                   }
                 },
