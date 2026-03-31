@@ -8877,12 +8877,25 @@
         "toTable": "CALENDARIO DAX"
       },
       {
-        "name": "46fdc45d-a421-436e-b882-831e81ae8780",
+        "name": "945de350-7bf9-eeb6-1354-69a30db6cee7",
         "fromColumn": "Data",
         "fromTable": "TB_Snf",
-        "joinOnDateBehavior": "datePartOnly",
         "toColumn": "Date",
-        "toTable": "LocalDateTable_d277e9a8-d298-4f5b-8d97-e0d800f5c05f"
+        "toTable": "CALENDARIO DAX"
+      },
+      {
+        "name": "768b75cb-fa4b-26b6-0a5c-320d3d25b4b2",
+        "fromColumn": "codcli",
+        "fromTable": "TB_Snf",
+        "toColumn": "CLI_Codigo",
+        "toTable": "TB_Cliente"
+      },
+      {
+        "name": "fc32ad51-b4e4-d7e0-ddd4-9decb273acb4",
+        "fromColumn": "codpro",
+        "fromTable": "TB_Snf",
+        "toColumn": "PRD_Id",
+        "toTable": "TB_Produto"
       }
     ],
     "sourceQueryCulture": "pt-BR",
@@ -9520,9 +9533,25 @@
                 "    Workspaces = Fonte{[Id=\"Workspaces\"]}[Data],",
                 "    #\"6b3d0be9-cdbd-4454-b8dc-62bf05ebb307\" = Workspaces{[workspaceId=\"6b3d0be9-cdbd-4454-b8dc-62bf05ebb307\"]}[Data],",
                 "    #\"bda523c5-15d7-4d7e-890a-25ae41b17802\" = #\"6b3d0be9-cdbd-4454-b8dc-62bf05ebb307\"{[dataflowId=\"bda523c5-15d7-4d7e-890a-25ae41b17802\"]}[Data],",
-                "    TB_Produto_ = #\"bda523c5-15d7-4d7e-890a-25ae41b17802\"{[entity=\"TB_Produto\",version=\"\"]}[Data]",
+                "    TB_Produto_ = #\"bda523c5-15d7-4d7e-890a-25ae41b17802\"{[entity=\"TB_Produto\",version=\"\"]}[Data],",
+                "",
+                "",
+                "INSERTROWS = Table.InsertRows(",
+                "    TB_Produto_,",
+                "    0,",
+                "    {",
+                "        [PRD_Id = 99999 , ",
+                "         PRD_Codigo = \"99999\", ",
+                "         PRD_GPR_IdGrupoProduto = 1 ,",
+                "         PRD_UNP_IdUnidadeProduto = null,",
+                "         PRD_Descricao = \"Produtos Snf\",",
+                "         PRD_Ativo = \"S\",",
+                "         UNP_Sigla = null]",
+                "    }",
+                ")",
+                "",
                 "in",
-                "    TB_Produto_"
+                "    INSERTROWS"
               ],
               "type": "m"
             }
@@ -9551,9 +9580,10 @@
             "expression": [
               "",
               "// Soma total de Faturamento com Desconto",
+              "// Soma total de Vendas sem NF",
               "SUMX(",
               "    TB_NotaFiscal,",
-              "    TB_NotaFiscal[NFI_ValorTotal] - TB_NotaFiscal[NFI_ValorDesconto] )"
+              "    TB_NotaFiscal[NFI_ValorTotal] - TB_NotaFiscal[NFI_ValorDesconto] ) + [01. sem NF]"
             ],
             "formatString": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00",
             "lineageTag": "97ad3d4f-39bb-4b44-9caa-04838c809388"
@@ -9975,6 +10005,21 @@
               ""
             ],
             "lineageTag": "c8aedbf4-ca0b-4255-a1cf-c29f6197e94c"
+          },
+          {
+            "name": "01. sem NF",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "displayFolder": "01. Faturamento\\Totais",
+            "expression": [
+              "",
+              "SUM( TB_Snf[Valor (+/-)] )"
+            ],
+            "lineageTag": "ec443baa-81b6-4f8e-8877-80fdefffeb2b"
           }
         ],
         "partitions": [
@@ -11385,18 +11430,7 @@
             "formatString": "Long Date",
             "lineageTag": "92999b6f-0999-4c21-8bcc-b6e967935d04",
             "sourceColumn": "Data",
-            "summarizeBy": "none",
-            "variations": [
-              {
-                "name": "Variation",
-                "defaultHierarchy": {
-                  "hierarchy": "Hierarquia de datas",
-                  "table": "LocalDateTable_d277e9a8-d298-4f5b-8d97-e0d800f5c05f"
-                },
-                "isDefault": true,
-                "relationship": "46fdc45d-a421-436e-b882-831e81ae8780"
-              }
-            ]
+            "summarizeBy": "none"
           },
           {
             "name": "Origem/Dest",
@@ -11440,6 +11474,36 @@
             "lineageTag": "5dacce5a-62aa-4e6a-a649-7e6dba71f05f",
             "sourceColumn": "Valor (+/-)",
             "summarizeBy": "sum"
+          },
+          {
+            "name": "codcli",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "ca3338f9-a798-46ae-b6be-a8298f4f8af0",
+            "sourceColumn": "codcli",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "codpro",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "578468c6-f97d-4882-9a26-1ac52510627d",
+            "sourceColumn": "codpro",
+            "summarizeBy": "none"
           }
         ],
         "lineageTag": "57ce7ecb-6059-4328-891e-6319c55e4ef6",
@@ -11457,7 +11521,9 @@
                 "    #\"Outras Colunas Removidas\" = Table.SelectColumns(#\"Linhas Superiores Removidas\",{\"Column1\", \"Column2\", \"Column3\", \"Column8\"}),",
                 "    #\"Cabeçalhos Promovidos\" = Table.PromoteHeaders(#\"Outras Colunas Removidas\", [PromoteAllScalars=true]),",
                 "    #\"Linhas Filtradas\" = Table.SelectRows(#\"Cabeçalhos Promovidos\", each ([Conta ativada] = \"Receita de vendas (sn)\")),",
-                "    #\"Tipo Alterado2\" = Table.TransformColumnTypes(#\"Linhas Filtradas\",{{\"Valor (+/-)\", type number}, {\"Conta ativada\", type text}, {\"Origem/Dest\", type text}, {\"Data\", type date}})",
+                "    #\"Personalização Adicionada\" = Table.AddColumn(#\"Linhas Filtradas\", \"codcli\", each 105),",
+                "    #\"Personalização Adicionada1\" = Table.AddColumn(#\"Personalização Adicionada\", \"codpro\", each \"99999\"),",
+                "    #\"Tipo Alterado2\" = Table.TransformColumnTypes(#\"Personalização Adicionada1\",{{\"Valor (+/-)\", type number}, {\"Conta ativada\", type text}, {\"Origem/Dest\", type text}, {\"Data\", type date}, {\"codcli\", type number}, {\"codpro\", type text}})",
                 "in",
                 "    #\"Tipo Alterado2\""
               ],
@@ -11465,212 +11531,6 @@
             }
           }
         ]
-      },
-      {
-        "name": "LocalDateTable_d277e9a8-d298-4f5b-8d97-e0d800f5c05f",
-        "annotations": [
-          {
-            "name": "__PBI_LocalDateTable",
-            "value": "true"
-          }
-        ],
-        "columns": [
-          {
-            "name": "Date",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "User"
-              }
-            ],
-            "dataCategory": "PaddedDateTableDates",
-            "dataType": "dateTime",
-            "formatString": "General Date",
-            "isHidden": true,
-            "isNameInferred": true,
-            "lineageTag": "4f48a893-43b2-4e16-ac9c-6a8500301cf1",
-            "sourceColumn": "[Date]",
-            "summarizeBy": "none",
-            "type": "calculatedTableColumn"
-          },
-          {
-            "name": "Ano",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "User"
-              },
-              {
-                "name": "TemplateId",
-                "value": "Year"
-              }
-            ],
-            "dataCategory": "Years",
-            "dataType": "int64",
-            "expression": "YEAR([Date])",
-            "formatString": "0",
-            "isHidden": true,
-            "lineageTag": "188e0498-5703-409a-a201-09e78b6182cf",
-            "summarizeBy": "none",
-            "type": "calculated"
-          },
-          {
-            "name": "MonthNo",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "User"
-              },
-              {
-                "name": "TemplateId",
-                "value": "MonthNumber"
-              }
-            ],
-            "dataCategory": "MonthOfYear",
-            "dataType": "int64",
-            "expression": "MONTH([Date])",
-            "formatString": "0",
-            "isHidden": true,
-            "lineageTag": "93b04444-b346-4899-903d-db02d197e888",
-            "summarizeBy": "none",
-            "type": "calculated"
-          },
-          {
-            "name": "Mês",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "User"
-              },
-              {
-                "name": "TemplateId",
-                "value": "Month"
-              }
-            ],
-            "dataCategory": "Months",
-            "dataType": "string",
-            "expression": "FORMAT([Date], \"MMMM\")",
-            "isHidden": true,
-            "lineageTag": "9111859e-e022-4e1b-adf5-2295c3c4aea8",
-            "sortByColumn": "MonthNo",
-            "summarizeBy": "none",
-            "type": "calculated"
-          },
-          {
-            "name": "QuarterNo",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "User"
-              },
-              {
-                "name": "TemplateId",
-                "value": "QuarterNumber"
-              }
-            ],
-            "dataCategory": "QuarterOfYear",
-            "dataType": "int64",
-            "expression": "INT(([MonthNo] + 2) / 3)",
-            "formatString": "0",
-            "isHidden": true,
-            "lineageTag": "dd7d0540-eecf-49f1-beab-bde75d5355f0",
-            "summarizeBy": "none",
-            "type": "calculated"
-          },
-          {
-            "name": "Trimestre",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "User"
-              },
-              {
-                "name": "TemplateId",
-                "value": "Quarter"
-              }
-            ],
-            "dataCategory": "Quarters",
-            "dataType": "string",
-            "expression": "\"Qtr \" & [QuarterNo]",
-            "isHidden": true,
-            "lineageTag": "dba7499a-e9ed-4065-a164-f4cac703b6ac",
-            "sortByColumn": "QuarterNo",
-            "summarizeBy": "none",
-            "type": "calculated"
-          },
-          {
-            "name": "Dia",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "User"
-              },
-              {
-                "name": "TemplateId",
-                "value": "Day"
-              }
-            ],
-            "dataCategory": "DayOfMonth",
-            "dataType": "int64",
-            "expression": "DAY([Date])",
-            "formatString": "0",
-            "isHidden": true,
-            "lineageTag": "54aff3cd-3d75-48d5-98ce-ac62b3df1469",
-            "summarizeBy": "none",
-            "type": "calculated"
-          }
-        ],
-        "hierarchies": [
-          {
-            "name": "Hierarquia de datas",
-            "annotations": [
-              {
-                "name": "TemplateId",
-                "value": "DateHierarchy"
-              }
-            ],
-            "levels": [
-              {
-                "name": "Ano",
-                "column": "Ano",
-                "lineageTag": "37e730fa-8c63-4eed-9f39-1adb112603e9",
-                "ordinal": 0
-              },
-              {
-                "name": "Trimestre",
-                "column": "Trimestre",
-                "lineageTag": "9adf5435-35bd-4370-ae1b-bf789b3957fd",
-                "ordinal": 1
-              },
-              {
-                "name": "Mês",
-                "column": "Mês",
-                "lineageTag": "9c00be15-c731-474b-9eae-a5abc2820d0b",
-                "ordinal": 2
-              },
-              {
-                "name": "Dia",
-                "column": "Dia",
-                "lineageTag": "1af74272-af1c-4269-bd48-c3ed3a5e0030",
-                "ordinal": 3
-              }
-            ],
-            "lineageTag": "c16e0f65-7010-45dc-9b63-6801d6c8d9fb"
-          }
-        ],
-        "isHidden": true,
-        "lineageTag": "ebfe93f0-2d9f-4f4e-b418-d0bf143cbab5",
-        "partitions": [
-          {
-            "name": "LocalDateTable_d277e9a8-d298-4f5b-8d97-e0d800f5c05f",
-            "mode": "import",
-            "source": {
-              "expression": "Calendar(Date(Year(MIN('TB_Snf'[Data])), 1, 1), Date(Year(MAX('TB_Snf'[Data])), 12, 31))",
-              "type": "calculated"
-            }
-          }
-        ],
-        "showAsVariationsOnly": true
       }
     ]
   }

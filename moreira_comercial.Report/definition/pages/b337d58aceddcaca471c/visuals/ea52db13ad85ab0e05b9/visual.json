@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "ea52db13ad85ab0e05b9",
   "position": {
     "x": 0,
@@ -91,7 +91,7 @@
               },
               "queryRef": "TB_Produto.UNP_Sigla",
               "nativeQueryRef": "UNP_Sigla",
-              "active": true
+              "active": false
             }
           ]
         },
@@ -110,26 +110,26 @@
               },
               "queryRef": "_Medidas.01. Total Faturamento",
               "nativeQueryRef": "01. Total Faturamento"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Medidas"
-                    }
-                  },
-                  "Property": "02. Quantidade/Volume"
-                }
-              },
-              "queryRef": "_Medidas.02. Quantidade/Volume",
-              "nativeQueryRef": "02. Quantidade/Volume"
             }
           ]
         }
       },
       "sortDefinition": {
-        "isDefaultSort": true
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_Medidas"
+                  }
+                },
+                "Property": "01. Total Faturamento"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
       }
     },
     "expansionStates": [
@@ -209,52 +209,10 @@
               "identityValues": [
                 {
                   "Literal": {
-                    "Value": "'SEMPRE MAIS TAPERA'"
-                  }
-                }
-              ],
-              "isToggled": true
-            },
-            {
-              "identityValues": [
-                {
-                  "Literal": {
-                    "Value": "'MOREIRA INDUSTRIA E COMERCIO DE ALIMENTOS LTDA'"
-                  }
-                }
-              ],
-              "children": [
-                {
-                  "identityValues": [
-                    {
-                      "Literal": {
-                        "Value": "'DIVERSOS'"
-                      }
-                    }
-                  ],
-                  "isToggled": true
-                }
-              ]
-            },
-            {
-              "identityValues": [
-                {
-                  "Literal": {
-                    "Value": "'SAMER SUPERMERCADOS'"
-                  }
-                }
-              ],
-              "isToggled": true
-            },
-            {
-              "identityValues": [
-                {
-                  "Literal": {
                     "Value": "'MERCEARIA WILLIAN'"
                   }
                 }
               ],
-              "isToggled": true,
               "children": [
                 {
                   "identityValues": [
@@ -276,7 +234,6 @@
                   }
                 }
               ],
-              "isToggled": true,
               "children": [
                 {
                   "identityValues": [
@@ -386,7 +343,6 @@
                   }
                 }
               ],
-              "isToggled": true,
               "children": [
                 {
                   "identityValues": [
@@ -483,11 +439,121 @@
                   ]
                 }
               ]
+            },
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'MOREIRA INDUSTRIA E COMERCIO DE ALIMENTOS LTDA'"
+                  }
+                }
+              ],
+              "isToggled": true,
+              "children": [
+                {
+                  "identityValues": [
+                    {
+                      "Literal": {
+                        "Value": "'DIVERSOS'"
+                      }
+                    }
+                  ],
+                  "isToggled": true
+                }
+              ]
             }
           ]
         }
       }
     ],
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "36621a4ba4a9f2a35432",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "CALENDARIO DAX"
+              }
+            },
+            "Property": "Dia/Mes"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "6bdc7d0927a58dc1d348",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "TB_Empresa"
+              }
+            },
+            "Property": "EMP_NomeFantasia"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "0c6a57dafa9ab10c534d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "TB_GProduto"
+              }
+            },
+            "Property": "GRP_Descricao"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "80f693f84c59a304da12",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "TB_Produto"
+              }
+            },
+            "Property": "PRD_Descricao"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "4411ec6b530aa6de825d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "TB_Produto"
+              }
+            },
+            "Property": "UNP_Sigla"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "a5a07c01dbe2d844ffb9",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Medidas"
+              }
+            },
+            "Property": "01. Total Faturamento"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }
