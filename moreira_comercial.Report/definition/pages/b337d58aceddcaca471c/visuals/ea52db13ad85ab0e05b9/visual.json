@@ -38,6 +38,21 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
+                      "Entity": "TBex_Vendedor"
+                    }
+                  },
+                  "Property": "VENDEDOR"
+                }
+              },
+              "queryRef": "TBex_Vendedor.VENDEDOR",
+              "nativeQueryRef": "VENDEDOR",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
                       "Entity": "TB_Empresa"
                     }
                   },
@@ -61,7 +76,7 @@
               },
               "queryRef": "TB_GProduto.GRP_Descricao",
               "nativeQueryRef": "GRP_Descricao",
-              "active": true
+              "active": false
             },
             {
               "field": {
@@ -76,7 +91,7 @@
               },
               "queryRef": "TB_Produto.PRD_Descricao",
               "nativeQueryRef": "PRD_Descricao",
-              "active": true
+              "active": false
             },
             {
               "field": {
@@ -138,6 +153,25 @@
           "Rows"
         ],
         "levels": [
+          {
+            "queryRefs": [
+              "TBex_Vendedor.VENDEDOR"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "TBex_Vendedor"
+                    }
+                  },
+                  "Property": "VENDEDOR"
+                }
+              }
+            ],
+            "isPinned": true
+          },
           {
             "queryRefs": [
               "TB_Empresa.EMP_NomeFantasia"
@@ -209,258 +243,11 @@
               "identityValues": [
                 {
                   "Literal": {
-                    "Value": "'MERCEARIA WILLIAN'"
+                    "Value": "'EWERTON'"
                   }
                 }
               ],
-              "children": [
-                {
-                  "identityValues": [
-                    {
-                      "Literal": {
-                        "Value": "'CONGELADOS'"
-                      }
-                    }
-                  ],
-                  "isToggled": true
-                }
-              ]
-            },
-            {
-              "identityValues": [
-                {
-                  "Literal": {
-                    "Value": "'ALTO RIBEIRAO COM  DE ALIMENTOS 3'"
-                  }
-                }
-              ],
-              "children": [
-                {
-                  "identityValues": [
-                    {
-                      "Literal": {
-                        "Value": "'PAES'"
-                      }
-                    }
-                  ],
-                  "isToggled": true,
-                  "children": [
-                    {
-                      "identityValues": [
-                        {
-                          "Literal": {
-                            "Value": "'PAO FRANCES 60G'"
-                          }
-                        }
-                      ],
-                      "isToggled": true
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "identityValues": [
-                {
-                  "Literal": {
-                    "Value": "'ALTO RIBEIRAO COM DE ALIMENTOS 1'"
-                  }
-                }
-              ],
-              "children": [
-                {
-                  "identityValues": [
-                    {
-                      "Literal": {
-                        "Value": "'PAES'"
-                      }
-                    }
-                  ],
-                  "isToggled": true
-                }
-              ]
-            },
-            {
-              "identityValues": [
-                {
-                  "Literal": {
-                    "Value": "'BARATÍSSIMO'"
-                  }
-                }
-              ],
-              "children": [
-                {
-                  "identityValues": [
-                    {
-                      "Literal": {
-                        "Value": "'CONGELADOS'"
-                      }
-                    }
-                  ],
-                  "isToggled": true,
-                  "children": [
-                    {
-                      "identityValues": [
-                        {
-                          "Literal": {
-                            "Value": "'MINI ROSCA AMERICANA'"
-                          }
-                        }
-                      ],
-                      "isToggled": true
-                    }
-                  ]
-                },
-                {
-                  "identityValues": [
-                    {
-                      "Literal": {
-                        "Value": "'SALGADOS'"
-                      }
-                    }
-                  ],
-                  "isToggled": true,
-                  "children": [
-                    {
-                      "identityValues": [
-                        {
-                          "Literal": {
-                            "Value": "'PAO DE QUEIJO 90G - 2KG'"
-                          }
-                        }
-                      ],
-                      "isToggled": true
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "identityValues": [
-                {
-                  "Literal": {
-                    "Value": "'BELLO SUPERMERCADOS 01'"
-                  }
-                }
-              ],
-              "children": [
-                {
-                  "identityValues": [
-                    {
-                      "Literal": {
-                        "Value": "'CONGELADOS'"
-                      }
-                    }
-                  ],
-                  "isToggled": true,
-                  "children": [
-                    {
-                      "identityValues": [
-                        {
-                          "Literal": {
-                            "Value": "'PAO CRU CONGELADO CANELA.'"
-                          }
-                        }
-                      ],
-                      "isToggled": true
-                    },
-                    {
-                      "identityValues": [
-                        {
-                          "Literal": {
-                            "Value": "'PAO CRU CONGELADO FRANCES 12H'"
-                          }
-                        }
-                      ],
-                      "isToggled": true
-                    },
-                    {
-                      "identityValues": [
-                        {
-                          "Literal": {
-                            "Value": "'PAO CRU CONGELADO FRANCES 4H'"
-                          }
-                        }
-                      ],
-                      "isToggled": true
-                    },
-                    {
-                      "identityValues": [
-                        {
-                          "Literal": {
-                            "Value": "'PAO CRU CONGELADO FRANCES 6H'"
-                          }
-                        }
-                      ],
-                      "isToggled": true
-                    }
-                  ]
-                },
-                {
-                  "identityValues": [
-                    {
-                      "Literal": {
-                        "Value": "'SALGADOS'"
-                      }
-                    }
-                  ],
-                  "isToggled": true,
-                  "children": [
-                    {
-                      "identityValues": [
-                        {
-                          "Literal": {
-                            "Value": "'BOLINHO CARNE FRITO - PCT 20'"
-                          }
-                        }
-                      ],
-                      "isToggled": true
-                    },
-                    {
-                      "identityValues": [
-                        {
-                          "Literal": {
-                            "Value": "'COXINHA FRITA - PCT C/20'"
-                          }
-                        }
-                      ],
-                      "isToggled": true
-                    },
-                    {
-                      "identityValues": [
-                        {
-                          "Literal": {
-                            "Value": "'SALSICHA FRITA - PCT C/20'"
-                          }
-                        }
-                      ],
-                      "isToggled": true
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "identityValues": [
-                {
-                  "Literal": {
-                    "Value": "'MOREIRA INDUSTRIA E COMERCIO DE ALIMENTOS LTDA'"
-                  }
-                }
-              ],
-              "isToggled": true,
-              "children": [
-                {
-                  "identityValues": [
-                    {
-                      "Literal": {
-                        "Value": "'DIVERSOS'"
-                      }
-                    }
-                  ],
-                  "isToggled": true
-                }
-              ]
+              "isToggled": true
             }
           ]
         }

@@ -8,7 +8,7 @@
       },
       {
         "name": "PBI_QueryOrder",
-        "value": "[\"TB_Empresa\",\"TB_Snf\",\"TB_NotaFiscal\",\"TB_GProduto\",\"TB_Produto\",\"_Medidas\",\"TB_Cliente\",\"Atualização\",\"_Senhas\"]"
+        "value": "[\"TB_Empresa\",\"TB_Snf\",\"TB_NotaFiscal\",\"TB_GProduto\",\"TB_Produto\",\"_Medidas\",\"TB_Cliente\",\"Atualização\",\"TBex_Vendedor\",\"_Senhas\"]"
       },
       {
         "name": "PBI_ProTooling",
@@ -8896,6 +8896,22 @@
         "fromTable": "TB_Snf",
         "toColumn": "PRD_Id",
         "toTable": "TB_Produto"
+      },
+      {
+        "name": "ba58fc13-8c74-d80d-fc05-61773c9d8341",
+        "crossFilteringBehavior": "bothDirections",
+        "fromColumn": "EMP_Id",
+        "fromTable": "TBex_Vendedor",
+        "toColumn": "EMP_Id",
+        "toTable": "TB_Empresa"
+      },
+      {
+        "name": "495d7e1f-c263-ffa5-8541-2ef4e4831f82",
+        "fromColumn": "VENDEDOR",
+        "fromTable": "TBex_Vendedor",
+        "toCardinality": "many",
+        "toColumn": "vendedor",
+        "toTable": "_Senhas"
       }
     ],
     "sourceQueryCulture": "pt-BR",
@@ -11364,6 +11380,19 @@
             "lineageTag": "12d1efd3-13af-45c4-b448-92ec1f236156",
             "sourceColumn": "Senha",
             "summarizeBy": "sum"
+          },
+          {
+            "name": "vendedor",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "3f798fca-edd2-4dfc-9368-c32c9b08d401",
+            "sourceColumn": "vendedor",
+            "summarizeBy": "none"
           }
         ],
         "lineageTag": "9e7740af-df83-45f6-9e17-f64b4d9cef82",
@@ -11526,6 +11555,99 @@
                 "    #\"Tipo Alterado2\" = Table.TransformColumnTypes(#\"Personalização Adicionada1\",{{\"Valor (+/-)\", type number}, {\"Conta ativada\", type text}, {\"Origem/Dest\", type text}, {\"Data\", type date}, {\"codcli\", type number}, {\"codpro\", type text}})",
                 "in",
                 "    #\"Tipo Alterado2\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "TBex_Vendedor",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navegação"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "EMP_NomeFantasia",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8c15e4e7-4cc8-4be8-b724-df8b60463f77",
+            "sourceColumn": "EMP_NomeFantasia",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EMP_RazaoSocial",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "1ce5b357-b615-4765-b7e5-14b0a8abce67",
+            "sourceColumn": "EMP_RazaoSocial",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EMP_Id",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "a0096602-fc21-47ba-af9d-84d42176294c",
+            "sourceColumn": "EMP_Id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "VENDEDOR",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "a94737af-d58e-401f-a40e-25146028926a",
+            "sourceColumn": "VENDEDOR",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "8f1fcc1f-4143-4c50-9dde-b8e2fcf294b3",
+        "partitions": [
+          {
+            "name": "TBex_Vendedor",
+            "mode": "import",
+            "queryGroup": "TB_Dimensao",
+            "source": {
+              "expression": [
+                "let",
+                "    Fonte = Excel.Workbook(Web.Contents(\"https://docs.google.com/spreadsheets/d/e/2PACX-1vSJDL_QRMQENAsyYsJaRYcEUBmT9GTAlPQpEVjyWQRDSrCwzuXKXT7GuUNPiWA5kg/pub?output=xlsx\"), null, true),",
+                "    Export_Sheet = Fonte{[Item=\"Export\",Kind=\"Sheet\"]}[Data],",
+                "    #\"Cabeçalhos Promovidos\" = Table.PromoteHeaders(Export_Sheet, [PromoteAllScalars=true]),",
+                "    #\"Linhas Filtradas\" = Table.SelectRows(#\"Cabeçalhos Promovidos\", each ([EMP_NomeFantasia] <> null)),",
+                "    #\"Outras Colunas Removidas\" = Table.SelectColumns(#\"Linhas Filtradas\",{\"EMP_NomeFantasia\", \"EMP_RazaoSocial\", \"EMP_Id\", \"VENDEDOR\"}),",
+                "    #\"Tipo Alterado\" = Table.TransformColumnTypes(#\"Outras Colunas Removidas\",{{\"EMP_NomeFantasia\", type text}, {\"EMP_RazaoSocial\", type text}, {\"EMP_Id\", type number}, {\"VENDEDOR\", type text}})",
+                "in",
+                "    #\"Tipo Alterado\""
               ],
               "type": "m"
             }
